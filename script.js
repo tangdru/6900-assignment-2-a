@@ -50,10 +50,10 @@ tripsByDuration.filter(null);
     
 //trips by 10 year age increments
 var tripsByAge = cfilter.dimension(function(d){return d.age});
-var tripsByAgeGroups = tripsByAge.group(function(d){return Math.floor(d/10)});
+var tripsByAgeGroup = tripsByAge.group(function(d){return Math.floor(d/10)}); //divide by 10(years)
 
-var decade = tripsByAgeGroups.all();
-    console.log("Trips separated by age group by decade ", decade)
+var decades = tripsByAgeGroup.all();
+    console.log("Trips separated by age group by decade ", decades)
 
 
     
